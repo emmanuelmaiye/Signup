@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="formstyle.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-wrapper">
+            <div class="banner">
+                <h1>Hello, <h1 id="get">friend</h1></h1>
+                <p>Enter your personal details and start journey with us</p>
+            </div>
+            <div class="green-bg">
+                <button type="button">Sign Up</button>
+            </div>
+            <form class="signup-form">
+                <h1>Create Account</h1>
+                <div class="social-media">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-linkedin-in"></i>
+                </div>
+                <p>or use your email for registration</p>
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="First Name" id="fname"/>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="text" placeholder="Last Name" />
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="number" placeholder="Age" id="age"/>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password" id="pwd"  />
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Confirm Password" id="conpwd"  />
+                </div>
+                <fieldset>
+                    <legend>Sex:</legend>
+                
+                    <div>
+                        <input type="radio" id="Male" name="gender" value="Male" checked>
+                        <label for="Male">Male</label>
+                    </div>
+                
+                    <div>
+                        <input type="radio" id="Female" name="gender" value="Female">
+                        <label for="Female">Female</label>
+                    </div>
+                
+                    <div>
+                        <input type="radio" id="chkdOthers" name="gender" value="chkdOthers" onclick="ShowHideDiv()"/>
+                        <label for="chkdOthers"> Others </label>
+                    </div>
+
+                    <div id="others" style="display: none">
+                        Enter Gender:
+                        <input type="text" id="txtothers" />
+                    </div>
+                    
+                </fieldset>
+                
+                <button type="button" id="Btn" onclick="validate()"> Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="form.js"></script>
+</body>
+
+</html>
