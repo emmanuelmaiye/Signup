@@ -1,10 +1,50 @@
 const container = document.querySelector(".container");
-const signUpBtn = document.querySelector(".green-bg button");
+const signUpBtn = document.querySelector("#sign-up-button");
+var allForms = document.querySelectorAll('all-form')
+var signInBtn = document.querySelector('#sign-in-button');
+var signInForm = document.querySelector('#sign-in-form');
+var signUpForm = document.querySelector('#sign-up-form');
 
 signUpBtn.addEventListener("click", () => {
-container.classList.toggle("change");
+    container.classList.toggle("change");
+    signUpBtn.style.display = 'none'
+    signInBtn.style.display = 'block'
+    signInForm.style.display = 'none'
 });
 
+
+signInBtn.addEventListener("click", () => {
+    // allForms.classList.toggle('signup-form')
+    signUpForm.style.display = 'none'
+    signInForm.style.display = 'block'
+    signUpBtn.style.display = 'block'
+    signInBtn.style.display = 'none'
+});
+
+
+
+
+
+
+
+// const btn = document.getElementById('button');
+
+// //Change button text on click
+// btn.addEventListener('click', function handleClick() {
+// btn.textContent = 'Sign In';
+// });
+
+// var btn = document.querySelector('button');
+// btn.addEventListener('click',method2);
+// function method2(){
+// btn.textContent = 'Sign In' g;
+// }
+
+
+// btn.addEventListener('click',method1);
+// function method1(){
+// btn.innerText = 'Sign Up';
+// }
 
 
 // comfirm password function
