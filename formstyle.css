@@ -55,7 +55,7 @@ html {
 .green-bg {
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, #3ab19b, #4cbf91);
+    background: #010351;
     position: absolute;
     top: 0;
     left: 0;
@@ -99,17 +99,57 @@ html {
     transition: left 1.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
+.signin-form {
+    width: 60rem;
+    /* height: 100%; */
+    position: absolute;
+    top: 25rem;
+    left: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10rem 0;
+    transition: left 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+#sign-in-form,
+.signin-form {
+    width: 60rem;
+    /* height: 100%; */
+    position: absolute;
+    top: 15rem;
+    left: 60rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10rem 0;
+    transition: left 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+
+}
+
+#sign-in-form,
+.input-group input {
+    position: relative;
+}
+
 .container.change .signup-form {
     left: 40rem;
 }
 
+
+
 .signup-form h1 {
     font-size: 4rem;
-    color: #3aaf9f;
+    color: #444444;
 }
+
+
 
 .social-media {
     display: flex;
+    margin: 2rem 0rem;
 }
 
 .social-media i {
@@ -126,6 +166,12 @@ html {
 }
 
 .signup-form p {
+    font-size: 1.8rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.sign-in-form p {
     font-size: 1.8rem;
     color: #555;
     margin-bottom: 2rem;
@@ -153,10 +199,10 @@ html {
     color: #555;
 }
 
-.signup-form button {
+.all-form button {
     width: 16rem;
     height: 5rem;
-    background-color: #3aaf9f;
+    background-color: #010351;
     border: none;
     border-radius: 3rem;
     text-transform: uppercase;
@@ -169,7 +215,7 @@ html {
 button:disabled {
     width: 16rem;
     height: 5rem;
-    background-color:rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.1);
     border: none;
     border-radius: 3rem;
     text-transform: uppercase;
@@ -180,31 +226,44 @@ button:disabled {
 
 }
 
-button:hover{
-    background-color: greenyellow;
+button:hover {
+    background-color: #f06407;
     color: black;
 }
 
 
 
 
-.radio, label{
-            width: 28rem;
-            height: 5rem;
-            padding: 1rem 1rem 1rem 3rem;
-            background-color:;
-            border: none;
-            border-radius: 0.5rem;    
-            font: 1rem 'Fira Sans', sans-serif;
-        }
-    
-        input {
-            padding: 1rem 1rem 1rem 3rem;
-            background-color: #ddd;
-            border: none;
-            border-radius: 0.5rem;
-            font: 1rem 'Fira Sans', sans-serif;
-            margin: .4rem;
-        }
+.radio,
+label {
+    width: 28rem;
+    height: 5rem;
+    padding: 1rem 1rem 1rem 3rem;
+    background-color: ;
+    border: none;
+    border-radius: 0.5rem;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input {
+    padding: 1rem 1rem 1rem 3rem;
+    background-color: #ddd;
+    border: none;
+    border-radius: 0.5rem;
+    font: 1rem 'Fira Sans', sans-serif;
+    margin: .4rem;
+}
+
+#sign-in-button {
+    display: none
+}
 
 
+
+
+@media (max-width: 575px) {
+    .banner .green-bg .signup-form {
+        columns: 100%;
+    }
+
+}
